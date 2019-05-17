@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 docker build -t tdd-docker-image -f Dockerfile .
 
 docker run --rm -it \
