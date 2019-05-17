@@ -20,6 +20,9 @@ Now it becomes a bit recursive. Since I am not a local-install person, I need a 
 See the [Architecture Decision Records (ADRs)][5] for the decisions 
 made in this repo and their reasoning. Eventually the change in decisions 
 must be recorded there too.
+The decisions taken are:
+- Record architecture decisions using ADRs [ADR #1][./docs/adr/000-use-adrs.md]
+- Goss as ServerSpec tool [ADR #2][./docs/adr/001-goss-as-serverspec.md]
 
 [1]: https://devopsdays.org/events/2019-poznan/program/wolfram-kriesing/
 [2]: https://devopsdays.org/events/2019-poznan/welcome/
