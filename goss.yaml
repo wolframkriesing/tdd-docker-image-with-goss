@@ -7,7 +7,7 @@ command:
     - 'USAGE:'
     - goss [global options] command [command options] [arguments...]
     - 'VERSION:'
-    - v0.1.6
+    - v0.3.6
     - 'COMMANDS:'
     - validate, v  Validate system
     - serve, s     Serve a health endpoint
