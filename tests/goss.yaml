@@ -12,3 +12,5 @@ file:
   /tests/goss.yaml:
     exists: true
     filetype: file
+    size:
+      gt: 0
