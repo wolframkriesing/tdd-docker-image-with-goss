@@ -14,3 +14,10 @@ file:
     filetype: file
     size:
       gt: 0
+    contains:
+    - "command:"
+    - "docker:"
+    - "goss:"
+    - "file:"
+    - "/tests/goss.yaml:"
+
