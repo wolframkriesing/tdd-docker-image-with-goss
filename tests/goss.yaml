@@ -8,3 +8,7 @@ command:
     - v0.3.6
     stderr: []
     timeout: 10000
+file:
+  /tests/goss.yaml:
+    exists: true
+    filetype: file
