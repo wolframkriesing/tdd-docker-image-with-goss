@@ -5,6 +5,11 @@ This is the repo that accompanies [the talk "TDD your next docker container"][1]
 ## TL;DR
 This repository is a step by step development of a [dgoss][3]-based TDDing approach to a build a docker image. Just follow each commit and it's commit message and it should enable the reader to follow the steps how to build a docker image that tests another docker image, the Image Under Test (IUT), using declarative tests powered by [goss][4].
 
+## Usage
+- `./run.sh` runs the tests, which are testing the docker image itself that is used for running the tests
+- `./run.sh /bin/bash` to open a bash shell inside the container that has `goss` and `dgoss` installed
+  running this command, you also have the `goss.yaml` file mounted into the container so you can play with the tests
+
 ## The tools used
 **goss:** "Goss is a YAML based [serverspec][8] alternative tool for validating a server’s configuration. It eases the process of writing tests by allowing the user to generate tests from the current system state. Once the test suite is written they can be executed, waited-on, or served as a health endpoint." – from [goss README][6]
 
