@@ -1,19 +1,34 @@
+# The following commands will we executed in the IUT and their
+# result is what we test for.
 command:
+  # This will run `docker`
   docker:
+    # and we expect the exit status to be 0
     exit-status: 0
+    # and nothing to appear on the stdout
     stdout: []
+  
+  # This will run the command `goss`
   goss:
     exit-status: 0
+    # we expect the version string to be part of the output of `goss`
     stdout:
     - v0.3.6
     stderr: []
     timeout: 10000
+    
+# The section "file:" verifies various aspect of files.    
 file:
+  # here we are testing if the file "/tests/goss.yaml" fulfills certain expectations 
   /tests/goss.yaml:
+    # does the file exist?
     exists: true
+    # is it a file (and not a directory)?
     filetype: file
+    # is it's size greater than (gt) 0 
     size:
       gt: 0
+    # does the file contain the following strings?
     contains:
     - "command:"
     - "docker:"
