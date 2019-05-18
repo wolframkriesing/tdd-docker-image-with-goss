@@ -27,6 +27,10 @@ In order to [TDD a docker container][9] we need an envirnonment that runs those 
 
 For TDDing the actual production docker image, the IUT, which we want to use for our application eventually, we will use the before mentioned first image with goss in it. If we would run the IUT inside the first image, we would need [docker in docker][10] (dind). This is mentioned in multiple places to [NOT be such a good idea][11], even though there is a [dind docker image][7]. The alternative is also described [here][13] (by the dind author). This is the approach we try to follow with this repo.
 
+## Tips, Tricks, Learnings
+
+- When running `dgoss` on a Mac add `GOSS_FILES_STRATEGY=cp` before the command as documented in github issues of goss ([the issue][14] and [the solution][15]). For example like so: `GOSS_FILES_STRATEGY=cp dgoss edit -p 8080:80 nginx`
+
 [1]: https://devopsdays.org/events/2019-poznan/program/wolfram-kriesing/
 [2]: https://devopsdays.org/events/2019-poznan/welcome/
 [3]: https://github.com/aelsabbahy/goss/tree/master/extras/dgoss
@@ -40,3 +44,5 @@ For TDDing the actual production docker image, the IUT, which we want to use for
 [11]: https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/
 [12]: https://hub.docker.com/_/docker/
 [13]: https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/#the-solution
+[14]: https://github.com/aelsabbahy/goss/issues/389
+[15]: https://github.com/aelsabbahy/goss/issues/389#issuecomment-438500712
