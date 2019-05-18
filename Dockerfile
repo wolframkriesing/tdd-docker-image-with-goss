@@ -12,3 +12,6 @@ RUN apt-key fingerprint 0EBFCD88
 RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 RUN apt-get update
 RUN apt-get install -y docker-ce
+
+# The `sleep` is there so goss can actually do its work and run the tests, I would like a better way, please send PRs
+CMD [ "/bin/bash", "-c", "GOSS_FILES_STRATEGY=cp dgoss run tdd-docker-image sleep 999" ]

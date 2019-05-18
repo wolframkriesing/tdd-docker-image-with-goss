@@ -8,5 +8,4 @@ docker run --rm -it \
 	--name tdd-docker-image \
 	--volume "$(pwd)":/go \
 	--volume /var/run/docker.sock:/var/run/docker.sock \
-	tdd-docker-image \
-	/bin/bash
+	tdd-docker-image
