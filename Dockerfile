@@ -13,5 +13,9 @@ RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debia
 RUN apt-get update
 RUN apt-get install -y docker-ce
 
+COPY tests /tests
+
+WORKDIR /tests
+
 # The `sleep` is there so goss can actually do its work and run the tests, I would like a better way, please send PRs
 CMD [ "/bin/bash", "-c", "GOSS_FILES_STRATEGY=cp dgoss run tdd-docker-image sleep 999" ]
