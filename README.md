@@ -20,9 +20,9 @@ See the [Architecture Decision Records (ADRs)][5] for the decisions
 made in this repo and their reasoning. Eventually the change in decisions 
 must be recorded there too.
 The decisions taken are:
-- Record architecture decisions using ADRs [ADR #0][./docs/adr/000-use-adrs.md]
-- Goss as ServerSpec tool [ADR #1][./docs/adr/001-goss-as-serverspec.md]
-- Do docker-in-docker via sockets [ADR #2][./docs/adr/002-docker-in-docker-via-sockets.md]
+- Record architecture decisions using ADRs [ADR #0](./docs/adr/000-use-adrs.md)
+- Goss as ServerSpec tool [ADR #1](./docs/adr/001-goss-as-serverspec.md)
+- Do docker-in-docker via sockets [ADR #2](./docs/adr/002-docker-in-docker-via-sockets.md)
 
 ## What shall the IUT (image under test) do?
 Now it becomes a bit recursive. Since I am not a local-install person, I need a docker image that has (d)goss installed. So this repo will show how to setup a docker container that has goss and dgoss installed (and now comes the recursive part) which will be used to mount the same docker image and test that those two are installed correctly.
